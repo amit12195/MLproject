@@ -5,8 +5,12 @@ import pickle
 from sklearn.preprocessing import PolynomialFeatures
 
 app = Flask(__name__)
-model_TC = pickle.load(open('C:\\Users\\HP\\Downloads\\DataScieneceStudyMettarial\\FASAL_interview\\Assignment_2\\ML_flaskCode\\TC_forecast.pkl','rb'))
-model_HUM = pickle.load(open('C:\\Users\\HP\\Downloads\\DataScieneceStudyMettarial\\FASAL_interview\\Assignment_2\\ML_flaskCode\\HUM_forecast.pkl','rb'))
+#model_TC = pickle.load(open('C:\\Users\\HP\\Downloads\\DataScieneceStudyMettarial\\FASAL_interview\\Assignment_2\\ML_flaskCode\\TC_forecast.pkl','rb'))
+#model_HUM = pickle.load(open('C:\\Users\\HP\\Downloads\\DataScieneceStudyMettarial\\FASAL_interview\\Assignment_2\\ML_flaskCode\\HUM_forecast.pkl','rb'))
+
+model_TC = pickle.load(open('TC_forecast.pkl','rb'))
+model_HUM = pickle.load(open('HUM_forecast.pkl','rb'))
+
 
 @app.route('/')
 def home():
