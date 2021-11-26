@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style>
+    h1 {text-align: center;}
+    div {text-align: center;}
+    </style>
 
 </head>
 
-<body>
+<body style="background-color:powderblue;">
  <div class="login">
-	<h1>Prediction </h1>
-
+	<h1>Prediction  of Tempreture and Humidity </h1>
+  <br>
+  <br>
+  <br>
+        <br>
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict_TC') }}"method="post">
-    	<input type="text" name="value" placeholder="value" required="required" />
+    	<input type="text" name="value" placeholder="Enter the value" required="required" />
         <br>
         <br>
         
@@ -27,28 +30,14 @@
    <br>
 
  
-   {{ prediction_text }}
-</div>
-
-<div class="login">
-	<h1> </h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict_HUM') }}"method="post">
-    	
-        <input type="text" name="value1" placeholder="value1" required="required" /> 
-        
-        <br>
-        <br>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+   {{ prediction_text_tc }}
 
    <br>
    <br>
-
- 
    {{ prediction_text_hum }}
 </div>
+
+
 
 </body>
 </html>
